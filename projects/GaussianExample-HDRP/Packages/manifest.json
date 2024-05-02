@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.ide.rider": "3.0.24",
     "com.unity.render-pipelines.high-definition": "14.0.8",
+    "com.unity.toonshader": "0.10.0-preview",
     "org.nesnausk.gaussian-splatting": "file:../../../package",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
