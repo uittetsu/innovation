@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GateController : MonoBehaviour
+public class Gate_EIkanmae2shokudomae : MonoBehaviour
 {
     // void OnTriggerEnter(Collider other)
     // {
