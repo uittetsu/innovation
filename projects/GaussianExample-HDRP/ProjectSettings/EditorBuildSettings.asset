@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scene/NU_EIkanmae.unity
-    guid: b83d44392e58f45a88e9ec65309ecc41
-  - enabled: 1
     path: Assets/scene/NU_syokudomae.unity
     guid: e2d982869eb73400a9330aeea897c790
+  - enabled: 1
+    path: Assets/scene/NU_EIkanmae.unity
+    guid: b83d44392e58f45a88e9ec65309ecc41
   m_configObjects: {}
