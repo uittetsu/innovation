@@ -97,3 +97,5 @@ crashlytics-build.properties
 /projects/**/Temp/*
 /projects/**/UserSettings/*
 /projects/**/obj/*
+
+*.mp4
