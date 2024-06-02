@@ -1,21 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class MakeVideo : MonoBehaviour
+public class MovieImage : MonoBehaviour
 {
-    private RawImage rawImage;
-    private VideoPlayer videoPlayer;
+    [SerializeField]RawImage rawImage = null;
+    [SerializeField]VideoPlayer videoPlayer = null;
+    [SerializeField]RectTransform rt = null;
 
     private void Awake()
     {   // 最初は表示しない
         rawImage.enabled = false;
-    }
-
-    void Start()
-    {
-        rawImage = GameObject.Find("RawImage2").GetComponent<RawImage>();
-        videoPlayer = GameObject.Find("RawImage2").GetComponent<VideoPlayer>();
     }
 
     /// <summary>
@@ -55,7 +52,7 @@ public class MakeVideo : MonoBehaviour
         rawImage.texture = videoPlayer.texture;
 
         // イメージサイズを動画と同じ大きさにする
-        RectTransform rt = GetComponent<RectTransform>();
+        // RectTransform rt = GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(videoPlayer.texture.width, videoPlayer.texture.height);
 
         // イベントハンドラをセットして再生する
