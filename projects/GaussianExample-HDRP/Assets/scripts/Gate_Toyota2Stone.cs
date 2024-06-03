@@ -9,7 +9,7 @@ public class Gate_Toyota2Stone : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            SceneManager.LoadScene("Stone");
+            SceneManager.LoadScene("Movie_Toyota2Stone");
         }
     }
 }
