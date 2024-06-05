@@ -20,6 +20,8 @@ public class Movie_Toyota2Stone : MonoBehaviour
 
         text = GameObject.Find("Text");
         t = text.GetComponent<Text>();
+
+        vp.loopPointReached += LoopPointReached;
     }
 
     // Update is called once per frame
@@ -35,8 +37,6 @@ public class Movie_Toyota2Stone : MonoBehaviour
         }
 
         t.text = "Speed : " + vp.playbackSpeed;
-
-        vp.loopPointReached += LoopPointReached;
     }
 
     // 動画再生完了時の処理

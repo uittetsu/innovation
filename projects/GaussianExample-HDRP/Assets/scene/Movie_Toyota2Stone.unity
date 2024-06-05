@@ -584,7 +584,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 512, y: 512}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1088,7 +1088,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072592167}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 2b17ddcbacf8b4db3a52995ccced5d89, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: e681faa4aa2af41aca23855079fa6a09, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
