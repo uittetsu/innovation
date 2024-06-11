@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12d929a7f62c48adbe9ff45c9a33ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Asset: {fileID: 11400000, guid: 6f4d409c563474e718fab88a44b8ccde, type: 2}
+  m_Asset: {fileID: 11400000, guid: a45583b290ef24dc7873f375a39f8f08, type: 2}
   m_SplatScale: 1
   m_OpacityScale: 1
   m_SHOrder: 3
