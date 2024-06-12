@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/scene/Stone.unity
     guid: 06c7ac57b84c443cf8cdff5af04fec04
   - enabled: 1
-    path: Assets/scene/Movie_Toyota2Stone.unity
+    path: Assets/scene/Movie_Toyota2Station.unity
     guid: 76664c73038564c45b284e8b012ca021
   - enabled: 1
     path: Assets/scene/Library.unity

@@ -5,7 +5,7 @@ using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Movie_Toyota2Stone : MonoBehaviour
+public class Movie_Toyota2Station : MonoBehaviour
 {
     private GameObject movie;
     private GameObject text;
@@ -42,6 +42,6 @@ public class Movie_Toyota2Stone : MonoBehaviour
     // 動画再生完了時の処理
     public void LoopPointReached(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Stone");
+        SceneManager.LoadScene("Station");
     }
 }
