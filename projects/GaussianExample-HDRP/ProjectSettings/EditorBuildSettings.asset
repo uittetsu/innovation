@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scene/NU_syokudomae.unity
+    path: Assets/scene/Northplaza.unity
     guid: e2d982869eb73400a9330aeea897c790
   - enabled: 1
     path: Assets/scene/NU_EIkanmae.unity
     guid: b83d44392e58f45a88e9ec65309ecc41
   - enabled: 1
-    path: Assets/scene/Toyota_mae.unity
+    path: Assets/scene/Toyota.unity
     guid: 0b7cee81b244f445fb6216216fbedd92
   - enabled: 1
     path: Assets/scene/Stone.unity
@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Movie_Toyota2Stone.unity
     guid: 76664c73038564c45b284e8b012ca021
+  - enabled: 1
+    path: Assets/scene/Library.unity
+    guid: 1b99e8c5878ad48cc9529871e9a20184
+  - enabled: 1
+    path: Assets/scene/Station.unity
+    guid: 66d2f5521be0f40e0af7e5e84361be4f
+  - enabled: 1
+    path: Assets/scene/Starbucks.unity
+    guid: 70ac6c1dbde404162b7c314522a122d5
   m_configObjects: {}
