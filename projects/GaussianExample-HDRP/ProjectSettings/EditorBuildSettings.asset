@@ -65,4 +65,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Movie_Starbucks2Northplaza.unity
     guid: 76eb5f8c27fd84d5ca281ceb20e30b96
+  - enabled: 1
+    path: Assets/scene/Movie_Starbucks2Library.unity
+    guid: 94ad6282a323f4724bea9e21d9005ce5
+  - enabled: 1
+    path: Assets/scene/Movie_Northplaza2Cafeplaza.unity
+    guid: 447a76f768b304de7957ea8761c653f2
+  - enabled: 1
+    path: Assets/scene/Movie_Library2Starbucks.unity
+    guid: 1154dfc873ca44aeab8ddfba30b9d007
   m_configObjects: {}
