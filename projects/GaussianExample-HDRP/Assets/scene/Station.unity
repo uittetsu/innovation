@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 1091646116}
   - component: {fileID: 1091646115}
   - component: {fileID: 1091646114}
-  - component: {fileID: 1091646119}
+  - component: {fileID: 1091646118}
   m_Layer: 0
   m_Name: gate
   m_TagString: Untagged
@@ -814,7 +814,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 21.004, z: 0}
---- !u!114 &1091646119
+--- !u!114 &1091646118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -823,9 +823,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091646112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a144493c8aa47b2a05a15236758cb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1195895f483e843e3a3b90f0ede297d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneName: Movie_Station2Stone
 --- !u!1 &1136629882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1281,7 @@ GameObject:
   - component: {fileID: 1446435793}
   - component: {fileID: 1446435792}
   - component: {fileID: 1446435791}
-  - component: {fileID: 1446435788}
+  - component: {fileID: 1446435795}
   m_Layer: 0
   m_Name: gate (1)
   m_TagString: Untagged
@@ -1288,18 +1289,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1446435788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446435787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a144493c8aa47b2a05a15236758cb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1446435791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1387,6 +1376,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 21.004, z: 0}
+--- !u!114 &1446435795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446435787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1195895f483e843e3a3b90f0ede297d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: Movie_Station2Stone
 --- !u!1 &1791602271
 GameObject:
   m_ObjectHideFlags: 0

@@ -791,6 +791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043808048}
   - component: {fileID: 1043808049}
+  - component: {fileID: 1043808051}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -822,9 +823,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043808047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab8059dbee8543948e8b6f8bd638605, type: 3}
+  m_Script: {fileID: 11500000, guid: c1568002a49204093ac469c58c004143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1043808051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043808047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c67e5063ab14cfb8ce1cfe742d2b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: Cafeplaza
 --- !u!1 &1054851482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1102,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072592167}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: bb7b9fb7a948041499e5fd9194824f63, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 24013fd0e0fc045e59cd0c3faa4dee11, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

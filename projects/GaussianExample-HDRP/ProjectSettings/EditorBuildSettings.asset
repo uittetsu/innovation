@@ -21,12 +21,48 @@ EditorBuildSettings:
     path: Assets/scene/Movie_Toyota2Station.unity
     guid: 76664c73038564c45b284e8b012ca021
   - enabled: 1
+    path: Assets/scene/Movie_Stone2Station.unity
+    guid: d0064f019fff94eb4998cd603c3a2398
+  - enabled: 1
+    path: Assets/scene/Movie_Station2Toyota.unity
+    guid: d96e8ca4f80594a788b590036b869490
+  - enabled: 1
     path: Assets/scene/Library.unity
     guid: 1b99e8c5878ad48cc9529871e9a20184
+  - enabled: 1
+    path: Assets/scene/Movie_Northplaza2Station.unity
+    guid: da4831c6f4aa043f98f0c6412a6bdd13
   - enabled: 1
     path: Assets/scene/Station.unity
     guid: 66d2f5521be0f40e0af7e5e84361be4f
   - enabled: 1
+    path: Assets/scene/Movie_Station2Northplaza.unity
+    guid: c15a108bb4e1f469ab2d2816a719f19a
+  - enabled: 1
+    path: Assets/scene/Movie_Station2Stone.unity
+    guid: db893e80109984630a1943f9186aba56
+  - enabled: 1
     path: Assets/scene/Starbucks.unity
     guid: 70ac6c1dbde404162b7c314522a122d5
+  - enabled: 1
+    path: Assets/scene/Movie_Stone2Toyota.unity
+    guid: 17d28a523d3a24b398d70b69b00c5ed7
+  - enabled: 1
+    path: Assets/scene/Movie_Stone2Cafe.unity
+    guid: dee1b637a96374751a261ec089caac06
+  - enabled: 1
+    path: Assets/scene/Movie_Toyota2Stone.unity
+    guid: 8edb67c84685f4191a6b9707a9c7ca37
+  - enabled: 1
+    path: Assets/scene/Movie_Toyota2Ground.unity
+    guid: a945551f43130481982218bfebbf26d7
+  - enabled: 1
+    path: Assets/scene/Movie_Ground2Toyota.unity
+    guid: b54d00ac1eb2942f99e77a0d9085476e
+  - enabled: 1
+    path: Assets/scene/Movie_Northplaza2Starbucks.unity
+    guid: 59e23d08c223543cd98921371e38f362
+  - enabled: 1
+    path: Assets/scene/Movie_Starbucks2Northplaza.unity
+    guid: 76eb5f8c27fd84d5ca281ceb20e30b96
   m_configObjects: {}

@@ -1,9 +1,13 @@
 import cv2
+import os
 
-scale = 5
+scale = 3
 
-video_path = "/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/豊田講堂→駅.mp4"
-save_path = video_path.split(".")[0] + f"_{scale}x" + ".mp4"
+video_path = "/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video/石碑→豊田講堂.MOV"
+save_path = "/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/" + video_path.split(".")[0].split("/")[-1] + f"_{scale}x" + ".mp4"
+
+if os.path.exists(save_path):
+    exit()
 
 video = cv2.VideoCapture(video_path)
 
@@ -27,3 +31,4 @@ while True:
     i += 1
 
 video.release()
+new_video.release()
