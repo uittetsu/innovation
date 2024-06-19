@@ -4,7 +4,8 @@ import os
 
 scale = 3
 
-video_pathes = glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*"))
+video_pathes = glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*.mp4"))
+video_pathes += glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*.MOV"))
 
 for video_path in video_pathes:
     print("processing :", video_path.split(".")[0].split("/")[-1])
@@ -21,7 +22,7 @@ for video_path in video_pathes:
     height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT)
                 )
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    new_video = cv2.VideoWriter(save_path, fourcc, fps, (width, height))
+    new_video = cv2.VideoWriter(save_path, fourcc, 30, (1280, 720))
 
     i = 0
     while True:
@@ -31,6 +32,7 @@ for video_path in video_pathes:
             break
         
         if i % scale == 0:
+            frame = cv2.resize(frame, (1280, 720))
             new_video.write(frame)
         
         i += 1

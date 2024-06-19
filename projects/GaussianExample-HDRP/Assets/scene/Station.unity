@@ -1160,9 +1160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227392966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 442b0ba8d19834c4b88c8ff4e69af8e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1195895f483e843e3a3b90f0ede297d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneName: Movie_Station2Northplaza
 --- !u!1 &1290187001
 GameObject:
   m_ObjectHideFlags: 0

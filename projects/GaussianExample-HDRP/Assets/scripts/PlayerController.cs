@@ -75,7 +75,11 @@ public class PlayerController : MonoBehaviour
         // x = Input.GetAxisRaw("Horizontal") * speed;
         // z = Input.GetAxisRaw("Vertical") * speed;
 
-        //transform.position += new Vector3(x,0,z);
+        // transform.position += new Vector3(x,0,z);
+
+        // Vector3 addPosition = cam.transform.forward * z + cam.transform.right * x;
+        // addPosition.y = 0f;
+        // transform.position += addPosition;
 
         transform.position += cam.transform.forward * z + cam.transform.right * x;
     }
