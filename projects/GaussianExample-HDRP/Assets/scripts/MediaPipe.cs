@@ -10,11 +10,18 @@ public class PythonScriptRunne : MonoBehaviour
     private Process pythonProcess;
     private Thread outputThread;
     private bool isRunning;
-    private float brightness;
+    private float speed;
     private readonly Regex brightnessRegex = new Regex(@"^\d+(\.\d+)?$"); // 数値のみをマッチ
+    private Movie movieScript;
 
     void Start()
     {
+        GameObject movieObject = GameObject.Find("RawImage");
+        if (movieObject != null)
+        {
+            movieScript = movieObject.GetComponent<Movie>();
+        }
+
         //RunPythonScript("python2unity/test.py");
         RunPythonScript("PythonScript/running_detection.py");
     }
@@ -46,17 +53,20 @@ public class PythonScriptRunne : MonoBehaviour
             while (isRunning && !reader.EndOfStream)
             {
                 string result = reader.ReadLine();
-                UnityEngine.Debug.Log("Raw Output: " + result); // 追加: 生の出力を表示
+                //UnityEngine.Debug.Log("Raw Output: " + result); // 追加: 生の出力を表示
                 if (!string.IsNullOrEmpty(result) && brightnessRegex.IsMatch(result))
                 {
-                    if (float.TryParse(result, out float parsedBrightness))
+                    if (float.TryParse(result, out float parsedSpeed))
                     {
                         lock (this)
                         {
-                            brightness = parsedBrightness;
+                            speed = parsedSpeed;
+
                         }
                     }
-                    UnityEngine.Debug.Log("Parsed Brightness: " + parsedBrightness); // 追加: 解析した輝度を表示
+                    //UnityEngine.Debug.Log("Parsed Brightness: " + parsedBrightness); // 追加: 解析した輝度を表示
+                    
+                    
                 }
             }
         }
@@ -76,14 +86,13 @@ public class PythonScriptRunne : MonoBehaviour
 
     void Update()
     {
-        float currentBrightness;
-        lock (this)
+        if (movieScript != null)
         {
-            currentBrightness = brightness;
+            movieScript.SetPlaybackSpeed(speed);
+            UnityEngine.Debug.Log("Playback speed set to: " + speed);
         }
-        // ここでcurrentBrightnessを使用してゲームオブジェクトを操作
-        UnityEngine.Debug.Log("Current Brightness: " + currentBrightness);
     }
+     
 
     void OnApplicationQuit()
     {

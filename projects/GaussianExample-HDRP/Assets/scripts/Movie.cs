@@ -26,23 +26,29 @@ public class Movie : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.UpArrow))
-        {
-            vp.playbackSpeed += 0.1f;
-        }
-        else if(Input.GetKey(KeyCode.DownArrow))
-        {   
-            vp.playbackSpeed -= 0.1f;
-        }
+    //void Update()
+    //{
+    //    if(Input.GetKey(KeyCode.UpArrow))
+    //    {
+    //        vp.playbackSpeed += 0.1f;
+    //    }
+    //    else if(Input.GetKey(KeyCode.DownArrow))
+    //    {   
+    //        vp.playbackSpeed -= 0.1f;
+    //    }
 
-        t.text = "Speed : " + vp.playbackSpeed;
-    }
+    //    t.text = "Speed : " + vp.playbackSpeed;
+    //}
 
     // 動画再生完了時の処理
     public void LoopPointReached(VideoPlayer vp)
     {
         SceneManager.LoadScene(nextSceneName);
+    }
+
+    public void SetPlaybackSpeed(float speed)
+    {
+        vp.playbackSpeed = speed;
+        t.text = "Speed : " + vp.playbackSpeed; // UIも更新
     }
 }
