@@ -101,3 +101,5 @@ crashlytics-build.properties
 *.mp4
 *.mov
 *.MOV
+
+share_video*
