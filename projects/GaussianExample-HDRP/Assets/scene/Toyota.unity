@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1195895f483e843e3a3b90f0ede297d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Movie_Toyota2Mountain
+  nextSceneName: Movie_Toyota2Ground
 --- !u!114 &1771385678
 MonoBehaviour:
   m_ObjectHideFlags: 0
