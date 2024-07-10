@@ -2,7 +2,7 @@ import cv2
 import glob
 import os
 
-scale = 3
+scale = 6
 
 video_pathes = glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*.mp4"))
 video_pathes += glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*.MOV"))
