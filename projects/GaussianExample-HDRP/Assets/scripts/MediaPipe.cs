@@ -5,21 +5,22 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using UnityEngine;
 
-public class PythonScriptRunne : MonoBehaviour
+public class  MediaPipe : MonoBehaviour
 {
     private Process pythonProcess;
     private Thread outputThread;
     private bool isRunning;
     private float speed;
     private readonly Regex brightnessRegex = new Regex(@"^\d+(\.\d+)?$"); // 数値のみをマッチ
-    private Movie movieScript;
+    private SwitchVideo videoScript;
+    private float prev_speed;
 
     void Start()
     {
-        GameObject movieObject = GameObject.Find("RawImage");
-        if (movieObject != null)
+        GameObject videoObject = GameObject.Find("RawImage");
+        if (videoObject != null)
         {
-            movieScript = movieObject.GetComponent<Movie>();
+            videoScript = videoObject.GetComponent<SwitchVideo>();
         }
 
         //RunPythonScript("python2unity/test.py");
@@ -86,15 +87,17 @@ public class PythonScriptRunne : MonoBehaviour
 
     void Update()
     {
-        if (movieScript != null)
+        //UnityEngine.Debug.Log("Playback speed set to: " + prev_speed +"to"+ speed);
+        if (videoScript != null && prev_speed != speed)
         {
-            movieScript.SetPlaybackSpeed(speed);
-            UnityEngine.Debug.Log("Playback speed set to: " + speed);
+            videoScript.SetPlaybackSpeed(speed);
+            //UnityEngine.Debug.Log("Update: " + speed);
+            prev_speed = speed;
         }
     }
      
 
-    void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         isRunning = false;
 

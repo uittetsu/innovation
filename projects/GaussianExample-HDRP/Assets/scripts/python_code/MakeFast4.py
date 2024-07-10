@@ -2,11 +2,14 @@ import cv2
 import glob
 import os
 import tqdm
-
+import math
 
 # scale = 3
-min_scale = 2
-max_scale = 11
+W = 1280
+H = 720
+FPS = 30
+min_scale = 0
+max_scale = 10
 
 video_paths = glob.glob(os.path.join("/GaussianExample-HDRP/Assets/movie/Original_video", "*.mp4"))
 video_paths += glob.glob(os.path.join("/Users/uchiyamaittetsu/Desktop/innovation/unity/share/innovation/projects/GaussianExample-HDRP/Assets/movie/Original_video", "*.MOV"))
@@ -21,9 +24,6 @@ for video_path in video_paths:
     
     cap = cv2.VideoCapture(video_path)
 
-    # fps = int(video.get(cv2.CAP_PROP_FPS))
-    # width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
-    # height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     # fourcc 
@@ -32,25 +32,31 @@ for video_path in video_paths:
     save_dir = os.path.join("..", "..", "movie", video_name)
     os.makedirs(save_dir, exist_ok=True)
     
-    for scale in range(min_scale, max_scale):
+    for n in range(min_scale, max_scale):
+        speed_factor = 2 * (1.25 ** n)
+        frame_interval = int(math.ceil(speed_factor))
+        print(speed_factor, frame_interval)
         
         # save_path = f"../../movie/{video_name}/{video_name}_{scale}x.mp4"
-        save_path = os.path.join(save_dir, f"{video_name}_{scale}x.mp4")
+        save_path = os.path.join(save_dir, f"{video_name}_{speed_factor:.2f}x.mp4")
         
-        video = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, (1280, 720))
+        video = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), FPS, (W, H))
         video_list.append(video)
 
     # i = 0
     for i in tqdm.tqdm(range(frame_count)):
         ret, frame = cap.read()
         
+        
         if not ret:
             break
         
-        frame = cv2.resize(frame, (1280, 720))
+        frame = cv2.resize(frame, (W, H))
         
-        for idx, scale in enumerate(range(min_scale, max_scale)):
-            if i % scale == 0:
+        for idx, n in enumerate(range(min_scale, max_scale)):
+            speed_factor = 2 * (1.25 ** n)
+            frame_interval = int(math.ceil(speed_factor))
+            if i % frame_interval == 0:
                 video_list[idx].write(frame)
         
         # i += 1

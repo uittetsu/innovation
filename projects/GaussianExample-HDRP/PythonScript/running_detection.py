@@ -9,7 +9,7 @@ import socket
 class Detection:
     def __init__(self):
         self.init_time = time.time()
-        self.MAX_SPEED = 3
+        self.MAX_SPEED = 10
         self.centroid_list = np.full((2, 3), 720, int)
         self.y_list = []
         self.y_integral = 0

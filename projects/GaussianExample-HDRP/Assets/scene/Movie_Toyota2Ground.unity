@@ -545,6 +545,7 @@ GameObject:
   - component: {fileID: 666094850}
   - component: {fileID: 666094849}
   - component: {fileID: 666094848}
+  - component: {fileID: 666094852}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -637,6 +638,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &666094852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666094847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9ae04a31b98464fbb96229c60c067e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: 
+  videoClips: []
 --- !u!1 &698598125
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c67e5063ab14cfb8ce1cfe742d2b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Ground
 --- !u!1 &1054851482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1104,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072592167}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6f76e5995b376483eaef6a19b85a311d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 338ee3cb1f3f842519d23281f6f98f36, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1102,7 +1116,7 @@ VideoPlayer:
   m_AspectRatio: 0
   m_DataSource: 0
   m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 0.33333334
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
@@ -1160,10 +1174,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072592167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c67e5063ab14cfb8ce1cfe742d2b8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b9ae04a31b98464fbb96229c60c067e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: 
+  nextSceneName: scene/Ground
+  videoClips:
+  - {fileID: 32900000, guid: fe46bea5315b348a9bcb89e52deddf16, type: 3}
+  - {fileID: 32900000, guid: fefa3cf3e976047bcb2781b25ce1ace8, type: 3}
+  - {fileID: 32900000, guid: 15d8a531b6a484a47a8a47053343ef49, type: 3}
+  - {fileID: 32900000, guid: c47b4b649d65243a7b1eb05e1784f273, type: 3}
+  - {fileID: 32900000, guid: 5b3ac796d5e034dce8f88096d35b2131, type: 3}
+  - {fileID: 32900000, guid: e9d3ee3042c9742f39146e6bc1ad0e0a, type: 3}
+  - {fileID: 32900000, guid: ea33fdccd095547fd8c0e2fd231ed003, type: 3}
+  - {fileID: 32900000, guid: 5ebfab8fa0a594a1990fee86a6f80aa1, type: 3}
+  - {fileID: 32900000, guid: d43e39df4555b4acd99171bd5fcc8343, type: 3}
 --- !u!1 &1812084957
 GameObject:
   m_ObjectHideFlags: 0
