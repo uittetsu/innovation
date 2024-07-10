@@ -83,4 +83,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Movie_Cafeplaza2Starbucks.unity
     guid: 1565dfd7bcaaf455190651bb0bb008ab
+  - enabled: 1
+    path: Assets/scene/Cafe.unity
+    guid: 731c92d31e374431b90b05f7356112a8
+  - enabled: 1
+    path: Assets/scene/Movie_Cafeplaza2Cafe.unity
+    guid: ee7aba45a6ed04034b6c298cbd1d6074
+  - enabled: 1
+    path: Assets/scene/Movie_Cafe2Cafeplaza.unity
+    guid: a73e899931a944428a7f87ce823ae96a
   m_configObjects: {}
