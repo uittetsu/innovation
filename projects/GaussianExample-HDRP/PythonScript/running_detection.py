@@ -75,40 +75,43 @@ class Detection:
         self.centroid = [self.h_id, centroid_x, centroid_y]
         print(self.centroid)
 
+    
+    def correction(self, value):
+        value = 2 * np.sqrt(value)
+        return value
 
     def detect_waving_hands(self):
         self.THRESHOLD_LOW_INS = self.img_h / 10
         self.THRESHOLD_HIGH_INS = self.img_h / 3
+        self.THRESHOLD_LOW_INS = self.correction(self.THRESHOLD_LOW_INS)
+        self.THRESHOLD_HIGH_INS = self.correction(self.THRESHOLD_HIGH_INS)
 
-        self.THRESHOLD_LOW_INT = 3000
-        self.THRESHOLD_HIGH_INT = 15000
+        self.THRESHOLD_LOW_INT = 0
+        self.THRESHOLD_HIGH_INT = 10000
         
         self.centroid_list[0] = self.centroid_list[1]
         self.centroid_list[1] = self.centroid
         
         diff_centroid_y = abs(self.centroid_list[0][2] - self.centroid_list[1][2])
+        diff_centroid_y = self.correction(diff_centroid_y)
         self.y_list.append(diff_centroid_y)
         
         self.y_integral += diff_centroid_y
         self.y_integral_list.append(self.y_integral)
 
-        self.hand_info = np.append(self.hand_info, self.y_integral)      
-        
+        self.hand_info = np.append(self.hand_info, self.y_integral) 
+
         # 瞬時値の積分値で判定
-        if self.y_integral > self.THRESHOLD_LOW_INT:
-            if self.y_integral <= self.THRESHOLD_HIGH_INT:
-                self.speed = (self.MAX_SPEED - self.MIN_SPEED) / (self.THRESHOLD_HIGH_INT - self.THRESHOLD_LOW_INT) * self.y_integral + (self.MIN_SPEED * self.THRESHOLD_HIGH_INT - self.MAX_SPEED * self.THRESHOLD_LOW_INT) / (self.THRESHOLD_HIGH_INT - self.THRESHOLD_LOW_INT)
-            else:
-                self.speed = self.MAX_SPEED
+        if self.y_integral <= self.THRESHOLD_HIGH_INT:
+            self.speed = (self.MAX_SPEED - self.MIN_SPEED) / self.THRESHOLD_HIGH_INT * self.y_integral + (self.MIN_SPEED * self.THRESHOLD_HIGH_INT - self.MAX_SPEED * self.THRESHOLD_LOW_INT) / (self.THRESHOLD_HIGH_INT - self.THRESHOLD_LOW_INT)
         else:
-            self.speed = self.MIN_SPEED
+            self.speed = self.MAX_SPEED
+        
+        self.speed = max(1, self.speed)
                 
         # 瞬時値で判定
-        if diff_centroid_y < self.THRESHOLD_LOW_INS:
-            if self.y_integral > self.THRESHOLD_LOW_INT:
-                self.y_integral -= self.THRESHOLD_LOW_INS
-            else:
-                pass
+        if (diff_centroid_y < self.THRESHOLD_LOW_INS) and (self.y_integral > self.THRESHOLD_LOW_INT):
+            self.y_integral -= self.THRESHOLD_LOW_INS
         
         cv2.putText(self.img, ">>{:.2g}".format(self.speed), 
                             (10, 125), cv2.FONT_HERSHEY_SIMPLEX, 5, (0, 0, 255), 10)
@@ -187,7 +190,7 @@ class Detection:
         ax1.plot(t, self.y_list)
         ax1.set_ylabel('displacement / frame') # y axis label
         # ax1.set_xlim(0, end_t) # x range
-        ax1.set_ylim(0, self.img_h) # y range
+        ax1.set_ylim(0, self.correction(self.img_h)) # y range
 
         # Scales on the axis inside and also on the top and right
         ax1.xaxis.set_tick_params(which = 'both', direction = 'in', left = True, right=True)
@@ -242,7 +245,6 @@ class Detection:
                 # if key == ord('q') or key == ord('Q') or key == 0x1b:
                 #     break
                 # return self.speed
-                # print(self.hand_info)
             # self.plot()
         self.cap.release()
 

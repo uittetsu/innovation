@@ -1102,7 +1102,7 @@ VideoPlayer:
   m_AspectRatio: 0
   m_DataSource: 0
   m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 0.33333334
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
@@ -1165,16 +1165,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: Ground
   videoClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 32900000, guid: 580b302ff099245178b13048253f4095, type: 3}
+  - {fileID: 32900000, guid: 6bf1045ff158e44d68ae7d9a324f1b45, type: 3}
+  - {fileID: 32900000, guid: f6b7354e6c3324546a8039553ce27c0b, type: 3}
+  - {fileID: 32900000, guid: 56acb021d8a874d57ace2610a8a42378, type: 3}
+  - {fileID: 32900000, guid: 8ca117dd3685b4642ba1bc3ed606fa75, type: 3}
+  - {fileID: 32900000, guid: a46eb0f07e2e9416397ecb01916062b1, type: 3}
+  - {fileID: 32900000, guid: 9549e244bf580423e89880be6cf01cb0, type: 3}
+  - {fileID: 32900000, guid: f5529658755ab4e70ab98843f62a3f3d, type: 3}
 --- !u!1 &1505105824
 GameObject:
   m_ObjectHideFlags: 0
