@@ -176,14 +176,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: Station
   videoClips:
-  - {fileID: 32900000, guid: dc65d032321594206bf3ffda0f858c29, type: 3}
-  - {fileID: 32900000, guid: fb59362322314471ba0b8112ac720068, type: 3}
-  - {fileID: 32900000, guid: c0cb997559b8c45f78b31bc4549609f2, type: 3}
-  - {fileID: 32900000, guid: da97fc8d2506f4c9297e868d1e976909, type: 3}
-  - {fileID: 32900000, guid: e1556d6499ee040dc829b3d8e3669306, type: 3}
-  - {fileID: 32900000, guid: 20f549cbe1ca94173b823a9930e765f0, type: 3}
-  - {fileID: 32900000, guid: 1e6cc4973e02e4682a2aed684159318e, type: 3}
-  - {fileID: 32900000, guid: dfd5057da22f24009bfbad200422dcb8, type: 3}
+  - {fileID: 32900000, guid: f942d3b3c8fc746f287ae3c766e8e939, type: 3}
+  - {fileID: 32900000, guid: 5c204f316247d4c60ae0675a338fc0d1, type: 3}
+  - {fileID: 32900000, guid: d9d8966b3d0fd467ba580bdcdcffc970, type: 3}
+  - {fileID: 32900000, guid: a495368dfed8245dbbb87f03f79ae4e4, type: 3}
+  - {fileID: 32900000, guid: bcf4fd0c67ab8451fa85a0d2ab417aae, type: 3}
+  - {fileID: 32900000, guid: 9da499c17509c4c80b63b7256e14a9fd, type: 3}
+  - {fileID: 32900000, guid: 528d70bc808ee498b892298745687111, type: 3}
+  - {fileID: 32900000, guid: 7573dbca29f684e67809d13975d38382, type: 3}
 --- !u!328 &598979653
 VideoPlayer:
   m_ObjectHideFlags: 0

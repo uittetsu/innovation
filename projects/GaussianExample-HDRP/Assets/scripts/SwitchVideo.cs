@@ -51,8 +51,8 @@ public class SwitchVideo : MonoBehaviour
             return;
         }
         
-        // ユーザーの入力に応じて動画クリップを切り替える
-        if (Input.GetKeyDown(KeyCode.UpArrow)　|| currentSpeed > prevSpeed)
+        // 動画クリップを切り替える
+        if (currentSpeed > prevSpeed)
         {
             prevSpeed = currentSpeed;
             if (currentClipIndex + 1 < videoClips.Length)
@@ -60,7 +60,7 @@ public class SwitchVideo : MonoBehaviour
                 SwitchVideoClip(1);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || currentSpeed < prevSpeed)
+        else if (currentSpeed < prevSpeed)
         {
             prevSpeed = currentSpeed;
             if (currentClipIndex - 1 >= 0)
@@ -70,10 +70,36 @@ public class SwitchVideo : MonoBehaviour
             
         }
 
+        // // ユーザーの入力に応じて動画クリップを切り替える
+        // if (Input.GetKeyDown(KeyCode.UpArrow) || currentSpeed > prevSpeed)
+        // {
+        //     prevSpeed = currentSpeed;
+        //     if (currentClipIndex + 1 < videoClips.Length)
+        //     {
+        //         SwitchVideoClip(1);
+        //     }
+        // }
+        // else if (Input.GetKeyDown(KeyCode.DownArrow) || currentSpeed < prevSpeed)
+        // {
+        //     prevSpeed = currentSpeed;
+        //     if (currentClipIndex - 1 >= 0)
+        //     {
+        //         SwitchVideoClip(-1);
+        //     }
+            
+        // }
+
         //else if (Input.GetKeyDown(KeyCode.Alpha3))
         //{
         //    SwitchVideoClip(halfSpeedClip);
         //}
+
+        // escapeでスキップ
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            mp.OnApplicationQuit();
+            SceneManager.LoadScene(nextSceneName);
+        }
     }
 
     void SeekCompletedHandler(VideoPlayer player)
